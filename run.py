@@ -16,7 +16,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--size', help='package size in gigabytes', default="3")
     parser.add_argument('--conan_remote', help='name for the conan remote', required=True)
-    parser.add_argument('--repetitions', help='number of times to repeat the process', default="2", type=int)
+    parser.add_argument('--repetitions', help='number of times to repeat the process', default="10", type=int)
     args = parser.parse_args()
     for x in range(args.repetitions):
         create_package = "conan create . -o file_size={}".format(args.size)

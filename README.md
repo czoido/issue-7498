@@ -6,8 +6,9 @@ several times. Although it is using Conan for the whole process this issue is kn
 curl](https://github.com/conan-io/conan/issues/7498#issuecomment-679306767).
 
 The number of times that the create, upload and download cycle is repeated is configurable via the
-`--repetitions` parameter. Also, the size in gigabytes (aproximately) of the library can be
-configured with the `--size` parameter. The   `--conan_remote` argument is required.
+`--repetitions` parameter (will do 10 repetitions if not specified). Also, the size in gigabytes
+(aproximately) of the library can be configured with the `--size` parameter (3 gigabytes by default).
+The   `--conan_remote` argument is required.
 
 ```bash
 python3 run.py --size=4 --conan_remote=<conan-remote> --repetitions=3
