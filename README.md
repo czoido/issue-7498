@@ -14,6 +14,14 @@ The   `--conan_remote` argument is required.
 python3 run.py --conan_remote=<conan-remote>
 ```
 
+It will do the following operations:
+
+- `conan create` of the package
+- `conan upload` to remote
+- `conan remove` from local cache
+- `conan install` from remote
+- `conan remove` from local cache
+
 ```bash
 usage: run.py [-h] [--size SIZE] --conan_remote CONAN_REMOTE
               [--repetitions REPETITIONS]
