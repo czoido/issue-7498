@@ -11,8 +11,10 @@ The number of times that the create, upload and download cycle is repeated is co
 The   `--conan_remote` argument is required.
 
 ```bash
-python3 run.py --size=4 --conan_remote=<conan-remote> --repetitions=3
+python3 run.py --size=<size-in-gigabytes> --conan_remote=<conan-remote> --repetitions=<number-or-repetitions>
+```
 
+```bash
 usage: run.py [-h] [--size SIZE] --conan_remote CONAN_REMOTE
               [--repetitions REPETITIONS]
 
