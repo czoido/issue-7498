@@ -22,7 +22,7 @@ if __name__ == "__main__":
         create_package = "conan create . -o file_size={}".format(args.size)
         upload_package = "conan upload large_package -r={} --all --confirm".format(args.conan_remote)
         remove_package = "conan remove large_package -f"
-        download_package = "conan install large_package/1.4@ -r={}".format(args.conan_remote)
+        download_package = "conan install large_package/1.4@ -o file_size={} -r={}".format(args.size, args.conan_remote)
         run(create_package)
         run(upload_package)
         run(remove_package)
