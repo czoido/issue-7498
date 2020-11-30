@@ -6,7 +6,7 @@ import string
 def _create_bigfile(name, size):
     with open(name, 'wb') as bigfile:
         for i in range(size):
-            bigfile.write(os.urandom(1024))
+            bigfile.write(os.urandom(1024*1024))
         bigfile.close()
 
 class LargePackageConan(ConanFile):
@@ -19,7 +19,7 @@ class LargePackageConan(ConanFile):
     exports_sources = "src/*"
 
     def build(self):
-        _create_bigfile("large_library.lib", int(self.options.file_size)*1024*1024)
+        _create_bigfile("large_library.lib", int(self.options.file_size)*1024)
 
     def package(self):
         self.copy("*.h", dst="include", src="src")
