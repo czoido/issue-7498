@@ -1,7 +1,7 @@
 ## Trying to reproduce [large packages download issue with Artifactory](https://github.com/conan-io/conan/issues/7498)
 
 This python script will create a package with a big library and upload and download from Artifactory
-several times. Although it is using Conan for the whole process this issue is known not happen also
+several times. Although it is using Conan for the whole process this issue is known to happen also
 [when downloading packages directly with
 curl](https://github.com/conan-io/conan/issues/7498#issuecomment-679306767).
 
